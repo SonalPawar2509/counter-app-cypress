@@ -1,0 +1,19 @@
+{
+    "name": "mini-project",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@cypress/webpack-dev-server": "^4.1.0",
+        "@cypress/webpack-preprocessor": "^6.0.4",
+        "cypress": "^14.4.1",
+        "http-server": "^14.1.1",
+        "start-server-and-test": "^2.0.12",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
+    },
+    "scripts": {
+        "cypress:open": "cypress open --e2e",
+        "cypress:run": "cypress run --e2e",
+        "start-server": "npx http-server -p 3000",
+        "test:e2e": "start-server-and-test start-server http://127.0.0.1:3000 cypress:run"
+    }
+}
