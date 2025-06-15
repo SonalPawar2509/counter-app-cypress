@@ -42,4 +42,10 @@ describe('Counter E2E', () => {
     cy.reload();
     getCounter().should('have.text', '0');
   });
+
+  it('EC3: Decrement button should be disabled or inactive when counter is 0', () => {
+    getCounter().should('have.text', '0');
+    cy.get('[data-cy=decrement]')
+      .should('be.disabled');
+  });
 }); 
